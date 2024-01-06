@@ -1,0 +1,20 @@
+*.sh
+node_modules
+*.md
+*.woff
+*.ttf
+.vscode
+.idea
+dist
+web-netease-cloud-music-dist
+/public
+/docs
+.husky
+.local
+/bin
+Dockerfile
+# .vscode
+.github
+.husky
+types/auto-import.d.ts
+types/components.d.ts
