@@ -3,7 +3,7 @@
  * @Author: smellycat littlecandyi@163.com
  * @Date: 2024-01-06 22:36:07
  * @LastEditors: smellycat littlecandyi@163.com
- * @LastEditTime: 2024-01-07 02:54:46
+ * @LastEditTime: 2024-01-07 17:44:35
  */
 
 import vue from '@vitejs/plugin-vue'
@@ -14,6 +14,8 @@ import createAutoImport from './auto-import'
 import createCompression from './compression'
 import createImagemin from './imagemin'
 import createImagesImport from './images-import'
+import createMetaLayouts from './meta-layouts'
+import createPages from './pages'
 import createProgress from './progress'
 import createStyleImport from './style-import'
 import createSvgIcons from './svg-icons'
@@ -40,6 +42,8 @@ const createVitePlugins = (
 	isBuild && vitePlugins.push(createCompression(viteEnv))
 	isBuild && viteUseImagemin && vitePlugins.push(createImagemin())
 	vitePlugins.push(createImagesImport())
+	vitePlugins.push(createMetaLayouts())
+	vitePlugins.push(createPages())
 	isBuild && vitePlugins.push(createProgress())
 	vitePlugins.push(createStyleImport())
 	vitePlugins.push(createSvgIcons())

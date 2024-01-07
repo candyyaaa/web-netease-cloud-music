@@ -3,8 +3,17 @@
  * @Author: smellycat littlecandyi@163.com
  * @Date: 2024-01-06 21:38:32
  * @LastEditors: smellycat littlecandyi@163.com
- * @LastEditTime: 2024-01-07 03:05:16
+ * @LastEditTime: 2024-01-07 17:10:13
 -->
+<route>
+{
+	name: "home",
+	meta: {
+		title: "首页"
+	}
+}
+</route>
+
 <script setup lang="ts">
 import { ElMessage } from 'element-plus'
 import appStore from '@/store'
@@ -17,9 +26,9 @@ const handleChangeToken = (token: string): void => {
 	setToken(token)
 
 	ElMessage({
-    message: 'Congrats, this is a success message.',
-    type: 'success',
-  })
+		message: 'Congrats, this is a success message.',
+		type: 'success'
+	})
 }
 </script>
 
