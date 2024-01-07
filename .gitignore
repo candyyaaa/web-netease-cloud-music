@@ -10,6 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+web-netease-cloud-music-dist
 *.local
 
 # Editor directories and files
@@ -20,7 +21,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-web-netease-cloud-music-dist
 types/auto-import.d.ts
 types/components.d.ts
 .eslintrc-auto-import.json
