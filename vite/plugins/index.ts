@@ -3,7 +3,7 @@
  * @Author: smellycat littlecandyi@163.com
  * @Date: 2024-01-06 22:36:07
  * @LastEditors: smellycat littlecandyi@163.com
- * @LastEditTime: 2024-01-07 17:44:35
+ * @LastEditTime: 2024-01-08 11:02:53
  */
 
 import vue from '@vitejs/plugin-vue'
@@ -13,7 +13,6 @@ import vueDevtools from 'vite-plugin-vue-devtools'
 import createAutoImport from './auto-import'
 import createCompression from './compression'
 import createImagemin from './imagemin'
-import createImagesImport from './images-import'
 import createMetaLayouts from './meta-layouts'
 import createPages from './pages'
 import createProgress from './progress'
@@ -33,7 +32,12 @@ const createVitePlugins = (
 	viteEnv: Record<string, string>,
 	isBuild: boolean = false
 ): (PluginOption | PluginOption[])[] => {
-	const vitePlugins: (PluginOption | PluginOption[])[] = [vue(), vueJsx(), EnhanceLog(), vueDevtools()]
+	const vitePlugins: (PluginOption | PluginOption[])[] = [
+		vue(),
+		vueJsx(),
+		EnhanceLog(),
+		vueDevtools()
+	]
 
 	const { VITE_USE_IMAGEMIN } = viteEnv
 	const viteUseImagemin = VITE_USE_IMAGEMIN && Boolean(VITE_USE_IMAGEMIN)
@@ -41,7 +45,6 @@ const createVitePlugins = (
 	vitePlugins.push(createAutoImport())
 	isBuild && vitePlugins.push(createCompression(viteEnv))
 	isBuild && viteUseImagemin && vitePlugins.push(createImagemin())
-	vitePlugins.push(createImagesImport())
 	vitePlugins.push(createMetaLayouts())
 	vitePlugins.push(createPages())
 	isBuild && vitePlugins.push(createProgress())

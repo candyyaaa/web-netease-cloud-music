@@ -1,19 +1,22 @@
 {
-  "cSpell.words": [
-    "smellycat",
-    "alova",
-    "netease",
-    "pinia",
-    "unplugin",
-    "vueuse",
-    "brotli",
-    "gifsicle",
-    "optipng",
-    "mozjpeg",
-    "pngquant",
-    "picocolors",
-    "elapseds",
-    "unocss",
-    "Attributify"
-  ]
+	"cSpell.words": [
+		"smellycat",
+		"alova",
+		"netease",
+		"pinia",
+		"unplugin",
+		"vueuse",
+		"brotli",
+		"gifsicle",
+		"optipng",
+		"mozjpeg",
+		"pngquant",
+		"picocolors",
+		"elapseds",
+		"unocss",
+		"Attributify",
+		"persistedstate",
+		"toplist"
+	],
+	"css.lint.unknownAtRules": "ignore"
 }

@@ -11,12 +11,18 @@ dependencies:
   '@vueuse/core':
     specifier: ^10.7.1
     version: 10.7.1(vue@3.4.5)
+  alova:
+    specifier: ^2.16.2
+    version: 2.16.2
   element-plus:
     specifier: ^2.4.4
     version: 2.4.4(react@18.2.0)(vue@3.4.5)
   pinia:
     specifier: ^2.1.7
     version: 2.1.7(typescript@5.3.3)(vue@3.4.5)
+  pinia-plugin-persistedstate:
+    specifier: ^3.2.1
+    version: 3.2.1(pinia@2.1.7)
   vue:
     specifier: ^3.3.11
     version: 3.4.5(typescript@5.3.3)
@@ -100,9 +106,6 @@ devDependencies:
   vite-plugin-vue-devtools:
     specifier: ^7.0.6
     version: 7.0.6(vite@5.0.11)
-  vite-plugin-vue-images:
-    specifier: ^0.6.1
-    version: 0.6.1
   vite-plugin-vue-meta-layouts:
     specifier: ^0.4.1
     version: 0.4.1(vite@5.0.11)(vue-router@4.2.5)
@@ -1795,6 +1798,11 @@ packages:
       uri-js: 4.4.1
     dev: true
 
+  /alova@2.16.2:
+    resolution: {integrity: sha512-x3E+f3DzjSAh+X6dgELO2YsmkIett1r8qDZTTk2B+wgqzi/CWEeVQroyWS/LAL7EPzE2/B2Iks/ZRGkCl3Okbw==}
+    engines: {node: '>= 0.12.0'}
+    dev: false
+
   /ansi-regex@2.1.1:
     resolution: {integrity: sha512-TIGnTpdo+E3+pCyAluZvtED5p5wCqLdezCyhPZzKPcxvFplEt4i+W7OONCKgeZFT3+y5NZZfOOS/Bdcanm1MYA==}
     engines: {node: '>=0.10.0'}
@@ -3477,18 +3485,6 @@ packages:
 
   /fast-diff@1.3.0:
     resolution: {integrity: sha512-VxPP4NqbUjj6MaAOafWeUn2cXWLcCtljklUtZf0Ind4XQ+QPtmA0b18zZy0jIQx+ExRVCR/ZQpBmik5lXshNsw==}
-    dev: true
-
-  /fast-glob@3.2.5:
-    resolution: {integrity: sha512-2DtFcgT68wiTTiwZ2hNdJfcHNke9XOfnwmBRWXhmeKM8rF0TGwmC/Qto3S7RoZKp5cilZbxzO5iTNTQsJ+EeDg==}
-    engines: {node: '>=8'}
-    dependencies:
-      '@nodelib/fs.stat': 2.0.5
-      '@nodelib/fs.walk': 1.2.8
-      glob-parent: 5.1.2
-      merge2: 1.4.1
-      micromatch: 4.0.5
-      picomatch: 2.3.1
     dev: true
 
   /fast-glob@3.3.2:
@@ -5506,6 +5502,14 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /pinia-plugin-persistedstate@3.2.1(pinia@2.1.7):
+    resolution: {integrity: sha512-MK++8LRUsGF7r45PjBFES82ISnPzyO6IZx3CH5vyPseFLZCk1g2kgx6l/nW8pEBKxxd4do0P6bJw+mUSZIEZUQ==}
+    peerDependencies:
+      pinia: ^2.0.0
+    dependencies:
+      pinia: 2.1.7(typescript@5.3.3)(vue@3.4.5)
+    dev: false
+
   /pinia@2.1.7(typescript@5.3.3)(vue@3.4.5):
     resolution: {integrity: sha512-+C2AHFtcFqjPih0zpYuvof37SFxMQ7OEG2zV9jRI12i9BOy3YQVAHwdKtyyc8pDcDyIc33WCIsZaCFWU7WWxGQ==}
     peerDependencies:
@@ -6962,15 +6966,6 @@ packages:
     transitivePeerDependencies:
       - '@nuxt/kit'
       - rollup
-      - supports-color
-    dev: true
-
-  /vite-plugin-vue-images@0.6.1:
-    resolution: {integrity: sha512-eaZHMimOOQdPSPIrAOrgwyS2pwxhLxAKc2idljCfThGZEDLAmPc4EtN2JOywUZb0Kcx/7+JDOIRFEJPTV5X5cg==}
-    dependencies:
-      debug: 4.3.4
-      fast-glob: 3.2.5
-    transitivePeerDependencies:
       - supports-color
     dev: true
 

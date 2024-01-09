@@ -3,7 +3,7 @@
  * @Author: smellycat littlecandyi@163.com
  * @Date: 2024-01-06 20:38:48
  * @LastEditors: smellycat littlecandyi@163.com
- * @LastEditTime: 2024-01-07 02:02:01
+ * @LastEditTime: 2024-01-08 04:33:46
  */
 import { defineConfig, loadEnv } from 'vite'
 import { pathResolve } from './vite/utils'
@@ -52,7 +52,9 @@ export default ({ mode, command }) => {
 		},
 
 		// 环境变量
-		define: {},
+		define: {
+			__VUE_PROD_DEVTOOLS__: true
+		},
 
 		// esbuild 配置
 		esbuild: {
@@ -84,7 +86,7 @@ export default ({ mode, command }) => {
 			// 代理配置
 			proxy: {
 				'/api': {
-					target: 'http://localhost:8080',
+					target: 'http://localhost:8090',
 					changeOrigin: true,
 					rewrite: path => path.replace(/^\/api/, '')
 				}

@@ -1,16 +1,12 @@
 <!--
- * @Description: App vue
+ * @Description: 侧边
  * @Author: smellycat littlecandyi@163.com
- * @Date: 2024-01-06 20:38:48
+ * @Date: 2024-01-08 10:35:32
  * @LastEditors: smellycat littlecandyi@163.com
- * @LastEditTime: 2024-01-07 23:51:16
+ * @LastEditTime: 2024-01-08 10:35:39
 -->
 <script setup lang="ts"></script>
 
 <template>
-	<div h-full>
-		<router-view />
-	</div>
+	<el-aside width="200px">Aside</el-aside>
 </template>
-
-<style scoped></style>

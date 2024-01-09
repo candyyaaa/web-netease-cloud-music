@@ -16,9 +16,9 @@ const createPages = () => {
 		// 排除
 		exclude: ['**/components/**/*', '**/components/*', '**/components'],
 		// 引入方式
-    importMode: 'async',
-    // 设置默认的路由块解析器，或者在SFC路由块中使用<route lang=xxx>
-    routeBlockLang: 'json5'
+		importMode: 'async',
+		// 设置默认的路由块解析器，或者在SFC路由块中使用<route lang=xxx>
+		routeBlockLang: 'json5'
 	})
 }
 

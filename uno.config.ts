@@ -3,7 +3,7 @@
  * @Author: smellycat littlecandyi@163.com
  * @Date: 2024-01-07 02:24:41
  * @LastEditors: smellycat littlecandyi@163.com
- * @LastEditTime: 2024-01-07 02:26:19
+ * @LastEditTime: 2024-01-08 10:14:05
  */
 import {
 	defineConfig,
@@ -35,22 +35,22 @@ export default defineConfig({
 		presetTypography(),
 		// 字体预设
 		presetWebFonts({
-			// fonts: {
-			// 	sans: 'Roboto',
-			// 	mono: ['Fira Code', 'Fira Mono:400,700'],
-			// 	lobster: 'Lobster',
-			// 	lato: [
-			// 		{
-			// 			name: 'Lato',
-			// 			weights: ['400', '700'],
-			// 			italic: true
-			// 		},
-			// 		{
-			// 			name: 'sans-serif',
-			// 			provider: 'none'
-			// 		}
-			// 	]
-			// }
+			fonts: {
+				sans: 'Roboto',
+				mono: ['Fira Code', 'Fira Mono:400,700'],
+				lobster: 'Lobster',
+				lato: [
+					{
+						name: 'Lato',
+						weights: ['400', '700'],
+						italic: true
+					},
+					{
+						name: 'sans-serif',
+						provider: 'none'
+					}
+				]
+			}
 			/* 
 				web-fonts生成的字体样式
 				

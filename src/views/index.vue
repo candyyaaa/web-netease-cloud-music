@@ -3,13 +3,14 @@
  * @Author: smellycat littlecandyi@163.com
  * @Date: 2024-01-06 21:38:32
  * @LastEditors: smellycat littlecandyi@163.com
- * @LastEditTime: 2024-01-07 17:10:13
+ * @LastEditTime: 2024-01-08 04:25:04
 -->
 <route>
 {
 	name: "home",
 	meta: {
-		title: "首页"
+		title: "首页",
+		layout: "index"
 	}
 }
 </route>
@@ -17,7 +18,8 @@
 <script setup lang="ts">
 import { ElMessage } from 'element-plus'
 import appStore from '@/store'
-import SvgIcon from '@/components/svg-icon/index.vue'
+import { loginCellphone } from '@/api/user/'
+import { useRequest } from 'alova'
 
 const { token } = storeToRefs(appStore.useUserStoreForSetup)
 const { setToken } = appStore.useUserStoreForSetup
@@ -28,6 +30,18 @@ const handleChangeToken = (token: string): void => {
 	ElMessage({
 		message: 'Congrats, this is a success message.',
 		type: 'success'
+	})
+}
+
+const query = {
+	phone: '19124095613',
+	password: 'Datuimao0.00'
+}
+
+const { send, loading } = useRequest(loginCellphone(query), { immediate: false, initialData: {} })
+const handleLogin = () => {
+	send().then(res => {
+		console.log(res)
 	})
 }
 </script>
@@ -41,6 +55,8 @@ const handleChangeToken = (token: string): void => {
 		<div>token: {{ token }}</div>
 
 		<SvgIcon name="vue" />
+
+		<el-button type="primary" :loading="loading" @click="handleLogin">登录</el-button>
 	</div>
 </template>
 

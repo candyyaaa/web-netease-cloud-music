@@ -1,0 +1,19 @@
+/*
+ * @Description: 全局css
+ * @Author: smellycat littlecandyi@163.com
+ * @Date: 2024-01-07 23:44:45
+ * @LastEditors: smellycat littlecandyi@163.com
+ * @LastEditTime: 2024-01-08 10:16:11
+ */
+body {
+	@apply h-screen max-h-screen;
+
+	#app {
+		@apply h-full;
+	}
+}
+
+/* 去除蓝色边框 */
+:focus {
+	outline: 0;
+}
